@@ -1,0 +1,38 @@
+.header {
+    background-color: rgb(255, 143, 181);
+
+    .header-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-logo{
+      font-size: 40px;
+      font-weight: 700;
+      color: white;
+    }
+    .header-nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+    .header-links-nav{
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  
+  
+
+  
+
+  
+
+  

@@ -1,7 +1,7 @@
 const users = [
     {
         id: 22,
-        nombre: "micaela",
+        nombre: "ricaela",
         rol: "jefa"
     },
     {
@@ -16,5 +16,5 @@ const users = [
     },
 ]
 
-const resultado = users.find((e) => e.nombre === "micaela");
+const resultado = users.find((e) => e.nombre === "micaela" || console.log ("no se ha encontrado el resultado"));
 console.log (resultado)
