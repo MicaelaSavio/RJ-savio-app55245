@@ -1,38 +1,91 @@
 .header {
-    background-color: rgb(255, 143, 181);
+  background-color: rgb(255, 143, 181);
+  text-shadow: 1px 1px 1px #504f4f;
 
-    .header-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px 0;
-      display: flex;
-      justify-content: space-between;
+  .header-container {
+    max-width: 100vh;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+
+  @media (max-width: 768px) {
+    .header-cart {
       align-items: center;
-    }
-    .header-logo{
-      font-size: 40px;
-      font-weight: 700;
-      color: white;
-    }
-    .header-nav{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-    }
-    .header-links-nav{
-      text-decoration: none;
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
     }
   }
-  
-  
 
-  
+  .header-links-nav {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-  
+  .header-links-nav:hover{
+    filter: opacity(.4);
+  }
 
-  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .header-logo {
+      margin-bottom: 10px;
+    }
+  }
+
+  .img-container-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .img-container-banner {
+      margin-top: -10px;
+   
+    }
+}
+
+  .img-container-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    
+  }
+
+  @media (max-width: 768px) {
+    .img-container-banner img {
+      width: 80vw;
+      
+    }
+  }
+
+  @media (max-width: 480px) {
+    .img-container-banner img {
+      width: 90vw;
+    }
+  }
+}
