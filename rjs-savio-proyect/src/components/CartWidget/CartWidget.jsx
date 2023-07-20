@@ -1,7 +1,7 @@
 import './CartWidget.scss'
 
 
-export const CartWidget = () => {
+export const CartWidget = ({ contador }) => {
     return (
         <div className='div-carrito'>
             <img className='carrito' src={'../carrito.svg'} alt="IconoCarrito"></img>

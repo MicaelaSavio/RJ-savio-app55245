@@ -1,0 +1,76 @@
+ [
+
+    {
+        "id": 1,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 10000,
+        "img":"https://dummyimage.com/200/000/fff",
+        "category": "zapatillas"        
+    },
+    {
+        "id": 2,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 12000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "zapatillas"
+        
+    },  
+    {
+        "id": 3,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 11400,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "zapatillas"
+    },
+    {
+        "id": 4,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 8000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "zapatillas"
+    },
+    {
+        "id": 5,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 9000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "zapatillas"
+    },
+    {
+        "id": 6,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 11000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "sale"
+    },
+    {
+        "id": 7,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 10500,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "sale"
+    },
+    {
+        "id": 8,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 15000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "sale"
+    },
+    {
+        "id": 9,
+        "nombre": "Producto",
+        "descripcion": "Zapatillas de diseño exclusivo",
+        "precio": 10000,
+        "img": "https://dummyimage.com/200/000/fff",
+        "category": "sale"
+    }
+]

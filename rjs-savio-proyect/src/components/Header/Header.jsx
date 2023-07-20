@@ -1,5 +1,6 @@
 import { CartWidget } from '../CartWidget/CartWidget'
 import './Header.scss'
+import { Link } from 'react-router-dom'
 
 
 
@@ -13,11 +14,12 @@ export const Header = () => {
                 </div>
             </div>
             <nav className="header-nav">
-                <a className="header-links-nav" href="#">Inicio</a>
-                <a className="header-links-nav" href="#">Productos</a>
-                <a className="header-links-nav" href="#">Contacto</a>
+                <Link className="header-links-nav" to="/">Inicio</Link>
+                <Link className="header-links-nav" to="/productos/sale">Ofertas</Link>
+                <Link className="header-links-nav" to="/cambios">Politicas de cambio</Link>
+                <Link className="header-links-nav" to="/nosotros">Nuestra historia</Link>
             </nav>
-            {/* <CartWidget /> */}
+           
 
             <div className="header-cart">
                 <CartWidget />

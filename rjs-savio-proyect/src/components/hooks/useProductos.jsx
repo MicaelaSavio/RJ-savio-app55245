@@ -1,15 +1,14 @@
-import './ItemListContainer.scss'
 import { useEffect, useState } from "react";
 import { pedirDatos } from "../../utils/pedirDatos";
-import ItemList from "../ItemList/ItemList";
-import { useProductos } from '../hooks/useProductos'
 import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({ greeting }) => {
-  const { categoryId } = useParams();
+export const useProductos = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [pageTitle, setPageTitle] = useState();
+  const [pageTitle, setPageTitle] = useState("Productos");
+
+  const { categoryId } = useParams();
+  console.log(categoryId);
 
   useEffect(() => {
     setLoading(true);
@@ -18,28 +17,18 @@ const ItemListContainer = ({ greeting }) => {
       .then((r) => {
         if (categoryId === "sale") {
           setProductos(r.filter((prod) => prod.category === categoryId));
-          setPageTitle("Nuestras Ofertas");
         } else {
           setProductos(r);
-          setPageTitle("Productos");
         }
       })
       .catch((e) => console.log(e))
       .finally(() => {
         setLoading(false);
+        if (categoryId === "sale") {
+          setPageTitle("Pagina de Ofertas"); 
+        }
       });
   }, [categoryId]);
 
-  return (
-    <div className="catalogo__contenedor">
-      <h1>{pageTitle}</h1>
-      {loading ? (
-        <p>Cargando...</p>
-      ) : (
-        <ItemList productos={productos} />
-      )}
-    </div>
-  );
+  return { productos, loading, pageTitle }; 
 };
-
-export default ItemListContainer;

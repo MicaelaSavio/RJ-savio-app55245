@@ -1,0 +1,24 @@
+
+.nosotros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .content {
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .story-text {
+    text-align: justify;
+    line-height: 1.6;
+  }
+  
