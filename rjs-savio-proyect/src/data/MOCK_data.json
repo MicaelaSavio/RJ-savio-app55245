@@ -2,7 +2,7 @@
 
     {
         "id": 1,
-        "nombre": "Producto",
+        "nombre": "Producto 1",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10000,
         "img":"https://dummyimage.com/200/000/fff",
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "nombre": "Producto",
+        "nombre": "Producto 2",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 12000,
         "img": "https://dummyimage.com/200/000/fff",
@@ -19,7 +19,7 @@
     },  
     {
         "id": 3,
-        "nombre": "Producto",
+        "nombre": "Producto 3",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 11400,
         "img": "https://dummyimage.com/200/000/fff",
@@ -27,7 +27,7 @@
     },
     {
         "id": 4,
-        "nombre": "Producto",
+        "nombre": "Producto 4",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 8000,
         "img": "https://dummyimage.com/200/000/fff",
@@ -35,7 +35,7 @@
     },
     {
         "id": 5,
-        "nombre": "Producto",
+        "nombre": "Producto 5",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 9000,
         "img": "https://dummyimage.com/200/000/fff",
@@ -43,7 +43,7 @@
     },
     {
         "id": 6,
-        "nombre": "Producto",
+        "nombre": "Producto 6",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 11000,
         "img": "https://dummyimage.com/200/000/fff",
@@ -51,7 +51,7 @@
     },
     {
         "id": 7,
-        "nombre": "Producto",
+        "nombre": "Producto 7",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10500,
         "img": "https://dummyimage.com/200/000/fff",
@@ -59,7 +59,7 @@
     },
     {
         "id": 8,
-        "nombre": "Producto",
+        "nombre": "Producto 8",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 15000,
         "img": "https://dummyimage.com/200/000/fff",
@@ -67,7 +67,7 @@
     },
     {
         "id": 9,
-        "nombre": "Producto",
+        "nombre": "Producto 9",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10000,
         "img": "https://dummyimage.com/200/000/fff",
