@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.scss'
 import Logo from "../Images/Logo.webp"
 import { CartWidget } from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 export const Header = () => {
     return (
@@ -13,16 +14,16 @@ export const Header = () => {
             </a>
             <ul>
                 <li>
-                    <a href="#">INICIO</a>
+                    <Link to='/'>INICIO</Link>
                 </li>
                 <li>
-                    <a href="">PRODUCTOS</a>
+                    <Link to='/productos'>PRODUCTOS</Link>
                 </li>
                 <li>
-                    <a href="">NOSOTROS</a>
+                    <Link to='/nosotros'>Nosotros</Link>
                 </li>
             </ul>
-        <CartWidget/>
+            <CartWidget />
         </header>
 
     )

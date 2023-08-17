@@ -1,31 +1,29 @@
 import React from "react";
-import { Header } from "./components/Header/Header"
-// import { ProductosLista } from "./components/Productos/Productos"
 import './App.css'
 import 'boxicons';
+import { Header } from "./components/Header/Header";
+import { Inicio } from "./components/Inicio/Inicio";
+import { ProductosLista } from "./components/Productos/Productos";
 import { Paginas } from "./components/Paginas/Paginas";
-import { Route, Routes, BrowserRouter } from 'react-router-dom'
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
 
-    <BrowserRouter>
+    <div className="App">
 
-      <div className="App">
+      <BrowserRouter>
+        <Header />
+        <Paginas />
         <Routes>
-
-          <Route>
-            <Header />
-            <Paginas />
-          </Route>
+          <Route path="/" element={<Inicio />} />
+          <Route path="/productos" element={<ProductosLista />} />
 
         </Routes>
+      </BrowserRouter>
 
-      </div>
-
-    </BrowserRouter>
+    </div>
 
   );
-
 }
 export default App;
