@@ -6,6 +6,7 @@ import { Inicio } from "./components/Inicio/Inicio";
 import { ProductosLista } from "./components/Productos/Productos";
 import { Paginas } from "./components/Paginas/Paginas";
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Nosotros } from "./components/Nosotros/Nosotros";
 
 function App() {
   return (
@@ -13,13 +14,15 @@ function App() {
     <div className="App">
 
       <BrowserRouter>
+        
         <Header />
-        <Paginas />
+        
         <Routes>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/inicio" element={<Inicio />} />
           <Route path="/productos" element={<ProductosLista />} />
-
+          <Route path="/Nosotros" element={<Nosotros />} />
         </Routes>
+        
       </BrowserRouter>
 
     </div>
