@@ -1,36 +1,31 @@
-import { Header } from "./components/Header/Header.jsx"
+import React from "react";
+import { Header } from "./components/Header/Header"
+// import { ProductosLista } from "./components/Productos/Productos"
 import './App.css'
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carrito } from './components/ItemCount/ItemCount'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Cambios } from "./components/Cambios/Cambios.jsx";
-import { Nosotros } from "./components/Nosotros/Nosotros.jsx";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
-
+import 'boxicons';
+import { Paginas } from "./components/Paginas/Paginas";
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
 function App() {
-
   return (
 
     <BrowserRouter>
 
-      <Header />
+      <div className="App">
+        <Routes>
 
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting={"Nuestros productos"} />} />
-        <Route path="/productos/:categoryId" element={<ItemListContainer />} />
-        <Route path="/detail/:itemId" element={< ItemDetailContainer />} />
-        <Route path="/cambios" element={<Cambios />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-      </Routes>
+          <Route>
+            <Header />
+            <Paginas />
+          </Route>
 
-      {/* <Footer/> */}
+        </Routes>
+
+      </div>
+
     </BrowserRouter>
 
-
-  )
+  );
 
 }
-
-export default App
+export default App;

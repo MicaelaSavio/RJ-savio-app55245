@@ -1,29 +1,29 @@
-import { CartWidget } from '../CartWidget/CartWidget'
+import React from 'react'
 import './Header.scss'
-import { Link } from 'react-router-dom'
-
-
+import Logo from "../Images/Logo.webp"
+import { CartWidget } from '../CartWidget/CartWidget'
 
 export const Header = () => {
-
     return (
-        <header className="header">
-            <div className="header-container">
-                <div className="img-container-banner">
-                    <img className='img' src={'../banner-index.webp'} alt="Banner CalzadosNatitax"></img>
+        <header>
+            <a href="#">
+                <div className="logo">
+                    <img src={Logo} alt="Logo Calzados Natitax" />
                 </div>
-            </div>
-            <nav className="header-nav">
-                <Link className="header-links-nav" to="/">Inicio</Link>
-                <Link className="header-links-nav" to="/productos/sale">Ofertas</Link>
-                <Link className="header-links-nav" to="/cambios">Politicas de cambio</Link>
-                <Link className="header-links-nav" to="/nosotros">Nuestra historia</Link>
-            </nav>
-           
-
-            <div className="header-cart">
-                <CartWidget />
-            </div>
+            </a>
+            <ul>
+                <li>
+                    <a href="#">INICIO</a>
+                </li>
+                <li>
+                    <a href="">PRODUCTOS</a>
+                </li>
+                <li>
+                    <a href="">NOSOTROS</a>
+                </li>
+            </ul>
+        <CartWidget/>
         </header>
+
     )
 }
