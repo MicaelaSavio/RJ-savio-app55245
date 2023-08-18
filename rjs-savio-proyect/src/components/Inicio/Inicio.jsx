@@ -1,5 +1,5 @@
 import React from 'react'
-import Portada from "../Images/bannerinicio.jpg"
+import Portada from "/Images/bannerinicio.jpg"
 import './Inicio.scss'
 import { Link } from 'react-router-dom'
 

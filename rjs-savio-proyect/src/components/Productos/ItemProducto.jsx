@@ -11,7 +11,6 @@ export const ItemProducto = ({
 }) => {
 
 
-
     return (
         <div className="producto">
             <a href="#">
@@ -22,7 +21,7 @@ export const ItemProducto = ({
             <div className="producto__footer">
                 <h2>{nombre}</h2>
                 <p>{category}</p>
-                <p className="price">{precio}</p>
+                <p className="price">${precio}</p>
             </div>
             <div className="buttom">
                 <button className='btn'>

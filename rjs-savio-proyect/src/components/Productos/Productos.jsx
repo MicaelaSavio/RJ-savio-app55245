@@ -5,8 +5,7 @@ import { ItemProducto } from './ItemProducto'
 
 export const ProductosLista = () => {
 
-    const value = useContext(DataContext)
-    const [productos] = value.productos
+    const { productos } = useContext(DataContext);
 
     console.log(productos);
 

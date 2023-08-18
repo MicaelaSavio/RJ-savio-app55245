@@ -8,24 +8,22 @@ export const DataProvider = (props) => {
 
 
     useEffect(() => {
-        const producto = MOCK_DATA.items
+        const producto = MOCK_DATA;
         if (producto) {
-            setProductos(producto)
+            setProductos(producto);
         }else{
-            setProductos([])
+            setProductos([]);
         }
         
     }, [])
 
-
     const value = {
-        productos: [productos]
+        productos: productos
     }
 
-
     return (
-        <DataContext.Provider value={value}>
-           { props.children }
+        <DataContext.Provider value = {value}>
+           {props.children}
         </DataContext.Provider>
     )
 
