@@ -7,11 +7,11 @@ import { Link } from 'react-router-dom'
 export const Header = () => {
     return (
         <header>
-            <a href="#">
+            <Link to='/'>
                 <div className="logo">
                     <img src={Logo} alt="Logo Calzados Natitax" />
                 </div>
-            </a>
+            </Link>
             <ul>
                 <li>
                     <Link to='/'>INICIO</Link>

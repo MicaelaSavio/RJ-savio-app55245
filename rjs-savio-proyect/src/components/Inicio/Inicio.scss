@@ -1,0 +1,32 @@
+.container-img50porciento {
+    width: 300%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        
+    }
+}
+
+/* MEDIA QUERIES - "img de %25OFF se ajusta a los valores de la pantalla"  */
+
+
+ @media (min-width: 768px) {
+     .container-img50porciento {
+       max-width: 100%;
+     }
+   }
+
+   @media (max-width: 768px) {
+        .container-img50porciento {
+            width: 100%;
+        }
+        .img-50porciento {
+            width: 100%;
+            height: auto;
+        }
+    }

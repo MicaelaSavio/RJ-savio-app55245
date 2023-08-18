@@ -4,71 +4,80 @@
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10000,
-        "img": "./public/zapa1.jpg",
-        "category": "zapatillas"
+        "img": "../components/Images/zapa1.jpg",
+        "category": "zapatillas",
+        "cantidad": 10
     },
     {
         "id": 2,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 12000,
-        "img": "./public/zapa2.jpg",
-        "category": "zapatillas"
+        "img": "../components/Images/zapa2.jpg",
+        "category": "zapatillas",
+        "cantidad": 5
     },
     {
         "id": 3,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 11400,
-        "img": "./public/zapa3.jpg",
-        "category": "zapatillas"
+        "img": "../components/Images/zapa3.jpg",
+        "category": "zapatillas",
+        "cantidad": 10
     },
     {
         "id": 4,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 8000,
-        "img": "./public/zapa4.jpg",
-        "category": "zapatillas"
+        "img": "../components/Images/zapa4.jpg",
+        "category": "zapatillas",
+        "cantidad": 5
     },
     {
         "id": 5,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 9000,
-        "img": "./public/zapa5.jpg",
-        "category": "sale"
+        "img": "../components/Images/zapa5.jpg",
+        "category": "sale",
+        "cantidad": 3
     },
     {
         "id": 6,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 11000,
-        "img": "./public/zapa6.jpg",
-        "category": "sale"
+        "img": "../components/Images/zapa6.jpg",
+        "category": "sale",
+        "cantidad": 3
     },
     {
         "id": 7,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10500,
-        "img": "./public/zapa7.jpg",
-        "category": "zapatillas"
+        "img": "../components/Images/zapa7.jpg",
+        "category": "zapatillas",
+        "cantidad": 10
     },
     {
         "id": 8,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 15000,
-        "img": "./public/zapa8.jpg",
-        "category": "sale"
+        "img": "../components/Images/zapa8.jpg",
+        "category": "sale",
+        "cantidad": 2
     },
     {
         "id": 9,
         "nombre": "Zapatillas urbanas",
         "descripcion": "Zapatillas de diseño exclusivo",
         "precio": 10000,
-        "img": "./public/zapa9.jpg",
-        "category": "sale"
+        "img": "../components/Images/zapa9.jpg",
+        "category": "sale",
+        "cantidad": 3
     }
 ]
