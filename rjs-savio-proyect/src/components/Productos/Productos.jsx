@@ -24,7 +24,7 @@ export const ProductosLista = () => {
                             precio={producto.precio}
                             img={producto.img}
                             category={producto.category}
-                            cantidad={producto.cantidad}
+                            stock={producto.cantidad}
                         />
                     ))
                 }

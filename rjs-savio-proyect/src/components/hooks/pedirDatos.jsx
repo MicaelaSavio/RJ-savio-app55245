@@ -8,7 +8,7 @@ export const DataProvider = (props) => {
     const [menu, setMenu] = useState(false);
     const [carrito, setCarrito] = useState([])
     const [isLoadingCarrito, setIsLoadingCarrito] = useState(true); 
-
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         const producto = MOCK_DATA;
@@ -50,12 +50,24 @@ export const DataProvider = (props) => {
     }, [carrito, isLoadingCarrito]);
 
     
+    useEffect(() =>{
+		const getTotal = () =>{
+			const res = carrito.reduce((prev, item) =>{
+				return prev + (item.precio * item.cantidad)
+			},0)
+			setTotal(res)
+		}
+		getTotal()
+	},[carrito])
+
+
 
     const value = {
         productos: productos,
         menu: [menu, setMenu],
         addCarrito: addCarrito,
-        carrito: [carrito, setCarrito]
+        carrito: [carrito, setCarrito],
+        total: [total, setTotal]
     }
 
     return (
