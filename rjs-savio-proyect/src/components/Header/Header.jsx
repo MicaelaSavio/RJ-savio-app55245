@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.scss'
 import Logo from '/Images/logo.webp'
-import { CartWidget } from '../CartWidget/CartWidget'
 import { Link } from 'react-router-dom'
+import { DataContext } from '../hooks/pedirDatos'
 
 export const Header = () => {
+    const value = useContext(DataContext);
+    const [menu, setMenu] = value.menu;
+    const [carrito, setCarrito] = value.carrito;
+
+
+    const toogleMenu = () =>{
+        setMenu(!menu)
+    }
+
+
     return (
         <header>
             <Link to='/'>
@@ -23,7 +33,11 @@ export const Header = () => {
                     <Link to='/nosotros'>Nosotros</Link>
                 </li>
             </ul>
-            <CartWidget />
+            <div className="cart" onClick={toogleMenu}>
+                <box-icon name="cart"></box-icon>
+                <span className="item__total">{carrito.length}</span>
+            </div>
+            
         </header>
 
     )

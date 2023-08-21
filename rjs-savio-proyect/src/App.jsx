@@ -8,6 +8,7 @@ import { Paginas } from "./components/Paginas/Paginas";
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Nosotros } from "./components/Nosotros/Nosotros";
 import { DataProvider } from "./components/hooks/pedirDatos";
+import { Carrito } from "./components/Carrito/Carrito";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <BrowserRouter>
 
           <Header />
+          <Carrito />
 
           <Routes>
             <Route path="/" element={<Inicio />} />
