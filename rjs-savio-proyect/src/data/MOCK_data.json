@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Color Negro",
+        "descripcion": "Estas zapatillas urbanas en color negro te brindan un estilo versátil y cómodo para tus aventuras diarias. Elaboradas con lona de alta calidad, son una elección ideal para completar tu look.",
         "precio": 10000,
         "img": "/Images/zapa1.jpg",
         "category": "zapatillas",
@@ -11,8 +11,8 @@
     },
     {
         "id": 2,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Color Marrón",
+        "descripcion": "Eleva tu estilo urbano con estas zapatillas en color marrón. Confeccionadas con lona resistente, te ofrecen comodidad y durabilidad mientras exploras la ciudad.",
         "precio": 12000,
         "img": "/Images/zapa2.jpg",
         "category": "zapatillas",
@@ -21,8 +21,8 @@
     },
     {
         "id": 3,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Azul Jean",
+        "descripcion": "Añade un toque de estilo inspirado en el denim a tu guardarropa con estas zapatillas en azul jean. Fabricadas en lona, te ofrecen un aspecto moderno y relajado.",
         "precio": 11400,
         "img": "/Images/zapa3.jpg",
         "category": "zapatillas",
@@ -31,8 +31,8 @@
     },
     {
         "id": 4,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Color Bordo",
+        "descripcion": "Estas zapatillas bordó son una opción elegante para tu estilo urbano. Hechas con lona de alta calidad, te proporcionan un equilibrio perfecto entre moda y comodidad.",
         "precio": 8000,
         "img": "/Images/zapa4.jpg",
         "category": "zapatillas",
@@ -41,28 +41,28 @@
     },
     {
         "id": 5,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas en Estampado Reptil de Cuerina",
+        "descripcion": "Destaca con estas zapatillas de estampado reptil en elegante cuerina. Agregan un toque audaz y original a tu look urbano, sin sacrificar la comodidad.",
         "precio": 9000,
         "img": "/Images/zapa5.jpg",
-        "category": "sale",
+        "category": "oferta",
         "cantidad": 1,
         "stock": 2
     },
     {
         "id": 6,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas Camuflado Verde de Lona",
+        "descripcion": "Agrega un toque de estilo militar a tu atuendo urbano con estas zapatillas camuflado en tonos verdes. Fabricadas en lona, te brindan un look moderno y distintivo.",
         "precio": 11000,
         "img": "/Images/zapa6.jpg",
-        "category": "sale",
+        "category": "oferta",
         "cantidad": 1,
         "stock": 2
     },
     {
         "id": 7,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Color Blanco",
+        "descripcion": "Las zapatillas blancas en lona son un clásico contemporáneo. Agregan un toque fresco y atemporal a tu estilo urbano, perfectas para diversas ocasiones.",
         "precio": 10500,
         "img": "/Images/zapa7.jpg",
         "category": "zapatillas",
@@ -71,21 +71,21 @@
     },
     {
         "id": 8,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Charol en Color Negro",
+        "descripcion": "Eleva tu estilo con estas zapatillas negras de charol. Su acabado brillante y único agrega un toque sofisticado a tu look urbano sin sacrificar la comodidad.",
         "precio": 15000,
         "img": "/Images/zapa8.jpg",
-        "category": "sale",
+        "category": "oferta",
         "cantidad": 1,
         "stock": 2
     },
     {
         "id": 9,
-        "nombre": "Zapatillas urbanas",
-        "descripcion": "Zapatillas de diseño exclusivo",
+        "nombre": "Zapatillas Urbanas de Lona en Color Rojo",
+        "descripcion": "Agrega una dosis de energía a tu estilo con estas zapatillas rojas en lona. Te brindan un toque de vibrante color y comodidad para un look urbano llamativo.",
         "precio": 10000,
         "img": "/Images/zapa9.jpg",
-        "category": "sale",
+        "category": "oferta",
         "cantidad": 1,
         "stock": 7
     }

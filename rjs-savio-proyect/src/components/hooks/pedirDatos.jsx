@@ -67,7 +67,8 @@ export const DataProvider = (props) => {
         menu: [menu, setMenu],
         addCarrito: addCarrito,
         carrito: [carrito, setCarrito],
-        total: [total, setTotal]
+        total: [total, setTotal],
+        
     }
 
     return (

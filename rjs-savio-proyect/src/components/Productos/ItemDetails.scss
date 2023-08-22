@@ -1,0 +1,116 @@
+.detalles{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 13rem 1rem 1rem 1rem;
+    box-sizing: border-box;
+}
+
+.detalles h2{
+  
+    font-size: 3rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0;
+
+}
+
+.detalles .price {
+    font-size: 3rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+.detalles button{
+    max-width: 300px;
+    margin: 1rem 0 0 0;
+    padding: 1rem 1rem;
+    border: none;
+    outline: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #fad5f3;
+    cursor: pointer;
+}
+
+.detalles button:hover{
+    
+    // background-color: #ec62b5;
+    color: white;
+    
+}
+
+.detalles .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+    max-width: 350px;
+}
+
+.detalles .grid > .nuevo, .size{
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white
+}
+
+.detalles .grid .nuevo{
+    background-color: green;
+}
+
+.detalles .grid .size{
+    background-color:#ec62b5;
+    display: flex;
+}
+
+.detalles .grid .size select{
+    border: none;
+    outline: 0;
+    font-size: 2rem;
+    background-color: #ec62b5;
+    color: white;
+    cursor: pointer;
+}
+
+.detalles input {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.detalles img {
+    min-height: 300px;
+    object-fit: contain;
+    margin-top: -7rem;
+    z-index: -1;
+}
+
+.detalles .description{
+    font-size: 1.1rem;
+    max-width: 1300px;
+    width: 100%;
+    letter-spacing: 3.5px;
+    color: #5f5d5d;
+    margin: 0 auto;
+    font-weight: 500;
+    
+}
+
+.detalles .description b{
+    font-size: 1.6rem;
+    color:#3e3c3c
+}
+
+.relacionados {
+    text-align: center;
+    background: #2e2e2e;
+    color: white;
+    max-width: 350px;
+    width: 100%;
+    margin: 2rem auto;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}

@@ -19,11 +19,11 @@ export const ItemProducto = ({
 
     return (
         <div className="producto">
-            <a href="#">
+            <Link to={`/productos/${id}`}>
                 <div className="producto__img">
                     <img src={img} alt={nombre} />
                 </div>
-            </a>
+            </Link>
             <div className="producto__footer">
                 <h2>{nombre}</h2>
                 <p>{category}</p>
@@ -34,7 +34,7 @@ export const ItemProducto = ({
                     Añadir al carrito
                 </button>
                 <div>
-                    <a href="#" className='btn'>Ver en detalle</a>
+                    <a href={`/productos/${id}`} className='btn'>Ver en detalle</a>
                 </div>
             </div>
         </div>
