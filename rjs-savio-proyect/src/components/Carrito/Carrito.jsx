@@ -69,15 +69,17 @@ export const Carrito = () => {
 
                     {
 
-                        carrito.length === 0 ?  <>
-                         <h2 style={{
-                            textAlign: "center", fontSize: "3rem"
-                        }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon></h2>
-                        
-                        <Link to="/productos"  onClick={tooglefalse}><button className='btncompra'>Realizar una compra</button></Link>
+                        carrito.length === 0 ? <> <div className='emptyCart'>
+                            <h2 style={{
+                                textAlign: "center", fontSize: "3rem"
+                            }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon></h2>
+
+                            <Link to="/productos" onClick={tooglefalse}><button className='btncompra'>Realizar una compra</button></Link>
+                        </div>
+
 
                         </>
-                        
+
                             : <>
 
                                 {
