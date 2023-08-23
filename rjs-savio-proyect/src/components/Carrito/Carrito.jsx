@@ -69,7 +69,7 @@ export const Carrito = () => {
 
                     {
 
-                        carrito.length === 0 ? <>
+                        carrito.length === 0 ?  <>
                          <h2 style={{
                             textAlign: "center", fontSize: "3rem"
                         }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon></h2>
@@ -110,11 +110,6 @@ export const Carrito = () => {
                     }
 
                 </div>
-
-                {/* <div className="carrito__footer">
-                    <h3>Total: ${total}</h3>
-                    <button className="btn">Comprar</button>
-                </div> */}
             </div>
         </div>
     )
