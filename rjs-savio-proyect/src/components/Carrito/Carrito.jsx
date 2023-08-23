@@ -74,7 +74,7 @@ export const Carrito = () => {
                             textAlign: "center", fontSize: "3rem"
                         }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon></h2>
                         
-                        <Link to="/productos"  onClick={tooglefalse} className="btn btn success" ><button className='btncompra'>Realizar una compra</button></Link>
+                        <Link to="/productos"  onClick={tooglefalse}><button className='btncompra'>Realizar una compra</button></Link>
 
                         </>
                         

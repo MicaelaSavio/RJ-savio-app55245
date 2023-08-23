@@ -139,13 +139,15 @@
 }
 
 .btncompra {
-    display: inline-block;
+    display: flex;
+    margin: 0 auto;
     padding: .3rem 1rem;
     font-size: 1.2rem;
     background-color: #fad5f3;
     border: 0;
     outline: 0;
     cursor: pointer;
+    
 }
 .btncompra:hover{
     background-color: #ec62b5;
