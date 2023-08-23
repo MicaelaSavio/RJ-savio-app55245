@@ -17,7 +17,9 @@ export const ItemProducto = ({
     const addCarrito = value.addCarrito;
 
 
-    return (
+    
+      return (
+
         <div className="producto">
             <Link to={`/productos/${id}`}>
                 <div className="producto__img">

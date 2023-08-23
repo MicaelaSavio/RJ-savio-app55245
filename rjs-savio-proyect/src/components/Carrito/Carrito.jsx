@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import Card from "/Images/zapa10.jpg";
 import './Carrito.scss'
 import { DataContext } from '../hooks/pedirDatos';
+import { Link } from 'react-router-dom'
+
 
 
 export const Carrito = () => {
@@ -9,7 +11,6 @@ export const Carrito = () => {
     const [menu, setMenu] = value.menu;
     const [carrito, setCarrito] = value.carrito;
     const [total] = value.total;
-
 
     const tooglefalse = () => {
         setMenu(false);
@@ -19,18 +20,18 @@ export const Carrito = () => {
     const show2 = menu ? "carrito show" : "carrito";
 
     const resta = id => {
-        carrito.forEach(item=>{
-            if(item.id === id){
-                item.cantidad === 1 ? item.cantidad = 1 : item.cantidad -=1;
+        carrito.forEach(item => {
+            if (item.id === id) {
+                item.cantidad === 1 ? item.cantidad = 1 : item.cantidad -= 1;
             }
             setCarrito([...carrito])
         })
     }
 
     const suma = id => {
-        carrito.forEach(item=>{
-            if(item.id === id){
-                item.cantidad +=1;
+        carrito.forEach(item => {
+            if (item.id === id) {
+                item.cantidad += 1;
             }
             setCarrito([...carrito])
         })
@@ -50,8 +51,9 @@ export const Carrito = () => {
             setCarrito([...carrito])
         }
 
-        
+
     }
+
 
     return (
         <div className={show1}>
@@ -59,43 +61,60 @@ export const Carrito = () => {
                 <div className="carrito__close" onClick={tooglefalse}>
                     <box-icon name="x"></box-icon>
                 </div>
+
+
                 <h2>Su carrito</h2>
+                <hr />
                 <div className="carrito__center">
 
                     {
-                        carrito.length === 0 ? <h2 style={{
+
+                        carrito.length === 0 ? <>
+                         <h2 style={{
                             textAlign: "center", fontSize: "3rem"
-                        }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon> </h2> : <>
+                        }} > Carrito vacio <box-icon name='sad' animation='burst' flip='horizontal' ></box-icon></h2>
+                        
+                        <Link to="/productos"  onClick={tooglefalse} className="btn btn success" ><button className='btncompra'>Realizar una compra</button></Link>
 
-                        {
-                        carrito.map((producto) => (
-                            <div className="carrito__item" key={producto.id}>
-                                <img src={producto.img} alt="" />
-                                <div>
-                                    <h3>{producto.nombre}</h3>
-                                    <p className="price">${producto.precio}</p>
-                                </div>
-                                <div>
-                                    <box-icon name="up-arrow" type="solid" onClick={() => suma(producto.id)}></box-icon>
-                                    <p className="cantidad">{producto.cantidad}</p>
-                                    <box-icon name="down-arrow" type="solid" onClick={() => resta(producto.id)}></box-icon>
-                                </div>
+                        </>
+                        
+                            : <>
 
-                                <div className="remove__item" onClick={() =>removeProducto(producto.id)}>
-                                    <box-icon name="trash"></box-icon>
-                                </div>
+                                {
+                                    carrito.map((producto) => (
+                                        <div className="carrito__item" key={producto.id}>
+                                            <img src={producto.img} alt="" />
+                                            <div>
+                                                <h3>{producto.nombre}</h3>
+                                                <p className="price">${producto.precio}</p>
+                                            </div>
+                                            <div>
+                                                <box-icon name="up-arrow" type="solid" onClick={() => suma(producto.id)}></box-icon>
+                                                <p className="cantidad">{producto.cantidad}</p>
+                                                <box-icon name="down-arrow" type="solid" onClick={() => resta(producto.id)}></box-icon>
+                                            </div>
 
-                            </div>
-                        ))
+                                            <div className="remove__item" onClick={() => removeProducto(producto.id)}>
+                                                <box-icon name="trash"></box-icon>
+                                            </div>
+                                        </div>
+
+                                    ))
+                                }
+
+                                <div className="carrito__footer">
+                                    <h3>Total: ${total}</h3>
+                                    <button className="btn">Comprar</button>
+                                </div>
+                            </>
                     }
-                    </>
-                    }
+
                 </div>
 
-                <div className="carrito__footer">
+                {/* <div className="carrito__footer">
                     <h3>Total: ${total}</h3>
                     <button className="btn">Comprar</button>
-                </div>
+                </div> */}
             </div>
         </div>
     )

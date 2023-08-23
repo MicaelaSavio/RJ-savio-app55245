@@ -30,8 +30,7 @@ export const ItemDetail = () => {
                 <div className="detalles">
                     <h2>{detalle.nombre} </h2>
                     <p className="price">${detalle.precio}</p>
-                    <div className="grid">
-                        {/* <p className="nuevo">Nuevo</p> */}
+                    <div className="grid">                   
                         <div className="size">
                             <select placeholder="Talle" >
                                 <option value="1">35</option>
