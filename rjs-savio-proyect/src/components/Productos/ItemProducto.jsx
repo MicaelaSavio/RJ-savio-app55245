@@ -10,6 +10,7 @@ export const ItemProducto = ({
     precio,
     img,
     category,
+    stock
 }) => {
 
 
@@ -30,6 +31,7 @@ export const ItemProducto = ({
                 <h2>{nombre}</h2>
                 <p>{category}</p>
                 <p className="price">${precio}</p>
+                {stock < 3 ? <p style={{color: "red"}}>Quedan pocas unidades</p> : null }
             </div>
             <div className="buttom">
                 <button className='btn' onClick={() => addCarrito(id)}>

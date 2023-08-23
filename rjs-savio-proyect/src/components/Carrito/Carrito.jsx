@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Card from "/Images/zapa10.jpg";
+
 import './Carrito.scss'
 import { DataContext } from '../hooks/pedirDatos';
 import { Link } from 'react-router-dom'
@@ -37,7 +37,6 @@ export const Carrito = () => {
         })
     }
 
-
     const removeProducto = id => {
         if (window.confirm("¿Quieres eliminar el producto?")) {
             carrito.forEach((item, index) => {
@@ -51,9 +50,7 @@ export const Carrito = () => {
             setCarrito([...carrito])
         }
 
-
     }
-
 
     return (
         <div className={show1}>
@@ -62,13 +59,11 @@ export const Carrito = () => {
                     <box-icon name="x"></box-icon>
                 </div>
 
-
                 <h2>Su carrito</h2>
                 <hr />
                 <div className="carrito__center">
 
                     {
-
                         carrito.length === 0 ? <> <div className='emptyCart'>
                             <h2 style={{
                                 textAlign: "center", fontSize: "3rem"
@@ -76,12 +71,8 @@ export const Carrito = () => {
 
                             <Link to="/productos" onClick={tooglefalse}><button className='btncompra'>Realizar una compra</button></Link>
                         </div>
-
-
                         </>
-
                             : <>
-
                                 {
                                     carrito.map((producto) => (
                                         <div className="carrito__item" key={producto.id}>
@@ -96,8 +87,8 @@ export const Carrito = () => {
                                                 <box-icon name="down-arrow" type="solid" onClick={() => resta(producto.id)}></box-icon>
                                             </div>
 
-                                            <div className="remove__item" onClick={() => removeProducto(producto.id)}>
-                                                <box-icon name="trash"></box-icon>
+                                            <div className="remove__item">
+                                                <box-icon name="trash" onClick={() => removeProducto(producto.id)}></box-icon>
                                             </div>
                                         </div>
 
