@@ -15,7 +15,7 @@ export const DataProvider = (props) => {
         if (producto) {
             setProductos(producto);
         }else{
-            setProductos([]);
+            setProductos([]); 
         }
         
     }, [])

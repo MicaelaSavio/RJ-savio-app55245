@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './Productos.scss'
-import { DataContext } from '../hooks/pedirDatos'
+import { DataContext } from '../hooks/DataContext'
 import { ItemProducto } from './ItemProducto'
 
 export const ProductosLista = () => {
@@ -24,7 +24,7 @@ export const ProductosLista = () => {
                             precio={producto.precio}
                             img={producto.img}
                             category={producto.category}
-                            stock={producto.cantidad}
+                            stock={producto.stock}
                         />
                     ))
                 }

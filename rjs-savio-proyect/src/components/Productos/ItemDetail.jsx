@@ -1,8 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { DataContext } from '../hooks/pedirDatos'
+import { DataContext } from '../hooks/DataContext'
 import { useParams } from 'react-router-dom'
 import './ItemDetails.scss'
 import { ItemProducto } from './ItemProducto'
+import { collection } from 'firebase/firestore'
+import { db } from 'firebase/firestore'
 
 export const ItemDetail = () => {
     const value = useContext(DataContext)
@@ -15,12 +17,12 @@ export const ItemDetail = () => {
 
 
     useEffect(() => {
-        productos.forEach(producto => {
-            item = 0;
-            if (producto.id === parseInt(params.id)) {
-                setDetalle(producto);
-            }
-        });
+       const productosRef = collection (db, "productos")
+       getDocs(productosRef)
+       .then((resp) =>{
+        const docs =resp.docs.map((doc) => doc.data())
+        console.log(docs)
+       })
     }, [params.id, productos]);
 
 
@@ -79,7 +81,7 @@ export const ItemDetail = () => {
                                 precio={producto.precio}
                                 img={producto.img}
                                 category={producto.category}
-                                stock={producto.cantidad}
+                                stock={producto.stock}
                             />
                         }
 

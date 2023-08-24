@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './Header.scss'
 import Logo from '/Images/logo.webp'
 import { Link } from 'react-router-dom'
-import { DataContext } from '../hooks/pedirDatos'
+import { DataContext } from '../hooks/DataContext'
 
 export const Header = () => {
     const value = useContext(DataContext);

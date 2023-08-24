@@ -7,7 +7,7 @@ import { ProductosLista } from "./components/Productos/Productos";
 import { Paginas } from "./components/Paginas/Paginas";
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Nosotros } from "./components/Nosotros/Nosotros";
-import { DataProvider } from "./components/hooks/pedirDatos";
+import { DataProvider } from "./components/hooks/DataContext";
 import { Carrito } from "./components/Carrito/Carrito";
 import { ItemDetail } from "./components/Productos/ItemDetail";
 
@@ -16,6 +16,8 @@ function App() {
 
   
   return (
+
+    
     <DataProvider>
       <div className="App">
 
