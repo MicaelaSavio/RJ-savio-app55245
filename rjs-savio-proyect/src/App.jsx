@@ -10,8 +10,8 @@ import { Nosotros } from "./components/Nosotros/Nosotros";
 import { DataProvider } from "./components/hooks/DataContext";
 import { Carrito } from "./components/Carrito/Carrito";
 import { ItemDetail } from "./components/Productos/ItemDetail";
-import Checkout from "./components/Checkout/Checkout";
-import PageNotFound from "./components/PageNotFound/PageNotFound";
+import  Checkout from "./components/Checkout/Checkout";
+import  PageNotFound from "./components/PageNotFound/PageNotFound";
 
 
 

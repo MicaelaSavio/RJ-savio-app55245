@@ -24,7 +24,9 @@ export const ItemDetail = () => {
 
 
 
-
+    if (detalle === null) {
+        return <PageNotFound />;
+    }
 
 
     return (

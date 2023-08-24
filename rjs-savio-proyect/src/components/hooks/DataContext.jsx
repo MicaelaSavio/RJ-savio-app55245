@@ -28,16 +28,20 @@ export const DataProvider = (props) => {
 
 
     const getOneProduct = async (id) => {
-        const docReference = doc(db, 'productos', id)
-        const res = await getDoc(docReference)
-        const prod = {
-            id: res.id,
-            ...res.data()
+        const docReference = doc(db, 'productos', id);
+        const res = await getDoc(docReference);
+    
+        if (res.exists()) {
+            const prod = {
+                id: res.id,
+                ...res.data()
+            };
+            return prod;
+        } else {
+            // No se encontró ningún documento con el ID proporcionado
+            return null;
         }
-
-        return prod
-
-    }
+    };
 
     const addCarrito = (id) => {
         const check = carrito.every(item => {
