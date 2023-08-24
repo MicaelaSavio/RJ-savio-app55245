@@ -3,10 +3,12 @@ import { DataContext } from '../hooks/DataContext'
 import { useParams } from 'react-router-dom'
 import './ItemDetails.scss'
 import { ItemProducto } from './ItemProducto'
+import PageNotFound from '../PageNotFound/PageNotFound'
 
 
 
 export const ItemDetail = () => {
+   
     const value = useContext(DataContext)
     const {getOneProduct, productos } = value;
     const params = useParams();
@@ -20,6 +22,18 @@ export const ItemDetail = () => {
         setDetalle(resp)
        })
     }, [params.id]);
+
+
+
+    if (ItemDetail) {
+        if (item.descripcion === undefined) {
+            
+            return (  
+                
+                <PageNotFound/>
+            )
+        }
+    }
 
 
     return (

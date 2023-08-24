@@ -1,0 +1,48 @@
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btnchkt {
+    padding: .3rem 1rem;
+    font-size: 1.2rem;
+    background-color: #fad5f3;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.btnchkt:hover {
+    background-color: #ec62b5;
+    color: white;
+}

@@ -1,20 +1,31 @@
-
+import { useState } from "react"
+import './Checkout.scss'
 
 const Checkout = () => {
+    const [values, setValues] = useState({
+        nombre: '',
+        direccion: '',
+        email: ''
+    })
 
-    const handleSubmit = () => {
+    const handleInputChange = (e) => {
+
+    }
+
+    const handleSubmit = (e) => {
         e.preventDefault()
-        console.log ("Submit")
+        console.log(values)
     }
 
     return (
-        <div className="container my-5">
-            <br />
-            <br />
-            <br />
+        <div className="container">
             <br />
             <br />
 
+            <br />
+            <br />
+            <br />
+            <br />
             <br />
 
             <h2>Termina tu compra</h2>
@@ -22,20 +33,32 @@ const Checkout = () => {
 
             <form onSubmit={handleSubmit}>
 
-                <input type="text"
-                    className="form-control my-2"
+                <input
+
+                    onChange={handleInputChange}
+                    value={values.nombre}
+                    type="text"
+                    className=""
                     placeholder="Ingresa tu nombre"
                 />
-                <input type="text"
-                    className="form-control my-2"
+                <input
+
+                    onChange={handleInputChange}
+                    value={values.direccion}
+                    type="text"
+                    className=""
                     placeholder="Ingresa tu direccion"
                 />
-                <input type="email"
-                    className="form-control my-2"
+                <input
+
+                    onChange={handleInputChange}
+                    value={values.email}
+                    type="email"
+                    className=""
                     placeholder="Ingresa tu email"
                 />
 
-                <button className="btn">Enviar</button>
+                <button className="btnchkt">Enviar</button>
 
             </form>
         </div>
