@@ -3,8 +3,8 @@ import { DataContext } from '../hooks/DataContext'
 import { useParams } from 'react-router-dom'
 import './ItemDetails.scss'
 import { ItemProducto } from './ItemProducto'
-import { collection } from 'firebase/firestore'
-import { db } from 'firebase/firestore'
+
+
 
 export const ItemDetail = () => {
     const value = useContext(DataContext)
@@ -14,16 +14,12 @@ export const ItemDetail = () => {
     const addCarrito = value.addCarrito;
     let item = 0;
 
-
-
     useEffect(() => {
-       const productosRef = collection (db, "productos")
-       getDocs(productosRef)
+        getOneProduct(params.id)
        .then((resp) =>{
-        const docs =resp.docs.map((doc) => doc.data())
-        console.log(docs)
+        setDetalle(resp)
        })
-    }, [params.id, productos]);
+    }, [params.id]);
 
 
     return (
