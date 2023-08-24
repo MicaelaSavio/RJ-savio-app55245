@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import MOCK_DATA from '../../data/MOCK_data.json'
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config'
 export const DataContext = createContext();

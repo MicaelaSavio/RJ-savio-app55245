@@ -10,6 +10,7 @@ import { Nosotros } from "./components/Nosotros/Nosotros";
 import { DataProvider } from "./components/hooks/DataContext";
 import { Carrito } from "./components/Carrito/Carrito";
 import { ItemDetail } from "./components/Productos/ItemDetail";
+import Checkout from "./components/Checkout/Checkout";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/productos/:id" element={<ItemDetail /> } />
             <Route path="/Nosotros" element={<Nosotros />} />
             <Route path="/Paginas" element={<Paginas />} />
+            <Route path="/Checkout" element={<Checkout />} />
           </Routes>
 
         </BrowserRouter>

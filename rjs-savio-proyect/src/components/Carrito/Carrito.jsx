@@ -89,6 +89,7 @@ export const Carrito = () => {
 
                                             <div className="remove__item">
                                                 <box-icon name="trash" onClick={() => removeProducto(producto.id)}></box-icon>
+                                               
                                             </div>
                                         </div>
 
@@ -97,7 +98,7 @@ export const Carrito = () => {
 
                                 <div className="carrito__footer">
                                     <h3>Total: ${total}</h3>
-                                    <button className="btn">Comprar</button>
+                                    <Link to="/checkout" onClick={tooglefalse}><button className="btn">Comprar</button></Link>
                                 </div>
                             </>
                     }
