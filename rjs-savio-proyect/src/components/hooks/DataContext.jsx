@@ -86,8 +86,9 @@ export const DataProvider = (props) => {
         addCarrito: addCarrito,
         carrito: [carrito, setCarrito],
         total: [total, setTotal],
-
-    }
+        getOneProduct: getOneProduct
+        
+        }
 
     return (
         <DataContext.Provider value={value}>

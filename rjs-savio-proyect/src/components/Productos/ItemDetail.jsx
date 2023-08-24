@@ -8,7 +8,7 @@ import { ItemProducto } from './ItemProducto'
 
 export const ItemDetail = () => {
     const value = useContext(DataContext)
-    const { productos } = value;
+    const {getOneProduct, productos } = value;
     const params = useParams();
     const [detalle, setDetalle] = useState([])
     const addCarrito = value.addCarrito;
