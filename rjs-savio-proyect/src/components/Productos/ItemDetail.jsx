@@ -6,7 +6,6 @@ import { ItemProducto } from './ItemProducto'
 import PageNotFound from '../PageNotFound/PageNotFound'
 
 
-
 export const ItemDetail = () => {
    
     const value = useContext(DataContext)
@@ -25,15 +24,7 @@ export const ItemDetail = () => {
 
 
 
-    if (ItemDetail) {
-        if (item.descripcion === undefined) {
-            
-            return (  
-                
-                <PageNotFound/>
-            )
-        }
-    }
+
 
 
     return (

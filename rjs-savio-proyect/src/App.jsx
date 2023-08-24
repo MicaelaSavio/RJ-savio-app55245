@@ -11,6 +11,8 @@ import { DataProvider } from "./components/hooks/DataContext";
 import { Carrito } from "./components/Carrito/Carrito";
 import { ItemDetail } from "./components/Productos/ItemDetail";
 import Checkout from "./components/Checkout/Checkout";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
+
 
 
 function App() {
@@ -34,6 +36,7 @@ function App() {
             <Route path="/Nosotros" element={<Nosotros />} />
             <Route path="/Paginas" element={<Paginas />} />
             <Route path="/Checkout" element={<Checkout />} />
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
 
         </BrowserRouter>
