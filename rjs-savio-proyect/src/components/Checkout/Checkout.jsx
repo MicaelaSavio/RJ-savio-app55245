@@ -1,9 +1,11 @@
 import { useContext, useState } from "react"
 import './Checkout.scss'
 import { DataContext } from "../hooks/DataContext"
+import { collection, addDoc } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 const Checkout = () => {
-    const { Carrito, getTotal } = useContext(DataContext)
+    const { carrito, getTotal } = useContext(DataContext)
 
 
     const [values, setValues] = useState({
@@ -27,13 +29,19 @@ const Checkout = () => {
 
         const orden = {
             cliente: values,
-            item: Carrito,
+            item: carrito,
             total: getTotal(),
-            
+            fyh: new Date()
             }
 
             console.log(orden)
-            
+
+            const orderRef = collection(db, "orders")
+
+            addDoc(orderRef, orders)
+            .then((doc => {
+                console.log(doc.id)
+            }))
     }
 
     return (
