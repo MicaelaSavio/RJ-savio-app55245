@@ -73,25 +73,44 @@ export const DataProvider = (props) => {
     }, [carrito, isLoadingCarrito]);
 
 
-    useEffect(() => {
-        const getTotal = () => {
-            const res = carrito.reduce((prev, item) => {
-                return prev + (item.precio * item.cantidad)
-            }, 0)
-            setTotal(res)
-        }
-        getTotal()
-    }, [carrito])
+    // useEffect(() => {
+    //     const getTotal = () => {
+    //         const res = carrito.reduce((prev, item) => {
+    //             return prev + (item.precio * item.cantidad)
+    //         }, 0)
+    //         setTotal(res)
+    //     }
+    //     getTotal()
+    // }, [carrito])
 
-    const value = {
+    const getTotal = () => {
+        const res = carrito.reduce((prev, item) => {
+          return prev + item.precio * item.cantidad;
+        }, 0);
+        return res;
+      };
+
+      const value = {
         productos: productos,
         menu: [menu, setMenu],
         addCarrito: addCarrito,
         carrito: [carrito, setCarrito],
         total: [total, setTotal],
+        getTotal,
         getOneProduct: getOneProduct
         
         }
+
+
+    // const value = {
+    //     productos: productos,
+    //     menu: [menu, setMenu],
+    //     addCarrito: addCarrito,
+    //     carrito: [carrito, setCarrito],
+    //     total: [total, setTotal],
+    //     getOneProduct: getOneProduct
+        
+    //     }
 
     return (
         <DataContext.Provider value={value}>

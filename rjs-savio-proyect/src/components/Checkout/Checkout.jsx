@@ -28,12 +28,12 @@ const Checkout = () => {
         const orden = {
             cliente: values,
             item: Carrito,
-            total: getTotal(), 
-            fyh: new Date()
+            total: getTotal(),
+            
+            }
 
-        }
-
-        console.log(orden)
+            console.log(orden)
+            
     }
 
     return (

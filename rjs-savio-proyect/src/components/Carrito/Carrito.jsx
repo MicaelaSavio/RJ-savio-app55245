@@ -9,7 +9,7 @@ export const Carrito = () => {
     const value = useContext(DataContext)
     const [menu, setMenu] = value.menu;
     const [carrito, setCarrito] = value.carrito;
-    const [total] = value.total;
+    const { getTotal } = useContext(DataContext)
 
     const tooglefalse = () => {
         setMenu(false);
@@ -96,7 +96,7 @@ export const Carrito = () => {
                                 }
 
                                 <div className="carrito__footer">
-                                    <h3>Total: ${total}</h3>
+                                <h3>Total: ${getTotal()}</h3>
                                     <Link to="/checkout" onClick={tooglefalse}><button className="btn">Comprar</button></Link>
                                 </div>
                             </>
