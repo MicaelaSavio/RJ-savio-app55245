@@ -29,7 +29,7 @@ const Checkout = () => {
 
         const orden = {
             cliente: values,
-            item: carrito,
+            item: carrito[0].map(item => ({id: item.id, nombre: item.nombre, precio: item.precio})),
             total: getTotal(),
             fyh: new Date()
             }
@@ -39,9 +39,9 @@ const Checkout = () => {
             const orderRef = collection(db, "orders")
 
             addDoc(orderRef, orders)
-            .then((doc => {
+            .then((doc) => {
                 console.log(doc.id)
-            }))
+            })
     }
 
     return (
