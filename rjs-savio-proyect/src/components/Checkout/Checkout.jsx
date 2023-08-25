@@ -3,12 +3,14 @@ import './Checkout.scss'
 import { DataContext } from "../hooks/DataContext"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
-
+import { Link } from "react-router-dom"
+import Swal from 'sweetalert2';
 
 const Checkout = () => {
     const { carrito, getTotal, vaciarCarrito } = useContext(DataContext)
 
-    const [orderId, setorderId] = useState(null)
+    const [orderId, setOrderId] = useState(null)
+
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
@@ -24,42 +26,61 @@ const Checkout = () => {
 
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(values)
-
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        // Verifica si algun campo está vacío
+        if (!values.nombre || !values.direccion || !values.email) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Campos Incompletos',
+                text: 'Por favor, completa todos los campos antes de enviar el formulario.'
+            });
+            return; 
+        }
+    
         const orden = {
             cliente: values,
-            item: carrito[0].map(item => ({id: item.id, nombre: item.nombre, precio: item.precio})),
+            item: carrito[0].map(item => ({ id: item.id, nombre: item.nombre, precio: item.precio })),
             total: getTotal(),
             fyh: new Date()
-            }
-
-            console.log(orden)
-
-            const orderRef = collection(db, "orders")
-
-            addDoc(orderRef, orden)
-            .then((doc) => {
-                console.log(doc.id)
-                vaciarCarrito()
-                setorderId(doc.id)
-            })
-
-            if (orderId) {
-                return (
-                    <div>
-                        <h2>Tu orden ha sido enviada!</h2>
-                        <hr />
-                        <p>Tu numero de orden es: <strong>{orderId}</strong></p>
-
-                        <Link to="/"><button>Volver a inicio</button></Link>
-                    </div>
-                )
-            }
-
-            
+        };
+    
+        try {
+            const orderRef = collection(db, "orders");
+            const docRef = await addDoc(orderRef, orden);
+    
+            console.log(docRef.id);
+            vaciarCarrito();
+            setOrderId(docRef.id);
+        } catch (error) {
+            console.error("Error al enviar la orden:", error);
+        }
     }
+    
+
+    if (orderId) {
+        return (
+            <div>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                
+                <h2>Tu orden ha sido enviada!</h2>
+                <hr />
+               
+                <p className="order">Tu numero de pedido es: <strong>{orderId}</strong></p>
+
+                <Link to="/"><button className="btnchkt">Volver a inicio</button></Link>
+            </div>
+        )
+    }
+
     
 
     return (
