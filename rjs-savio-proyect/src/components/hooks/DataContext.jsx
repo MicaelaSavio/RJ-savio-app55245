@@ -73,22 +73,16 @@ export const DataProvider = (props) => {
     }, [carrito, isLoadingCarrito]);
 
 
-    // useEffect(() => {
-    //     const getTotal = () => {
-    //         const res = carrito.reduce((prev, item) => {
-    //             return prev + (item.precio * item.cantidad)
-    //         }, 0)
-    //         setTotal(res)
-    //     }
-    //     getTotal()
-    // }, [carrito])
-
     const getTotal = () => {
         const res = carrito.reduce((prev, item) => {
           return prev + item.precio * item.cantidad;
         }, 0);
         return res;
       };
+
+      const vaciarCarrito = () =>{
+        setCarrito([])
+    }
 
       const value = {
         productos: productos,
@@ -97,20 +91,12 @@ export const DataProvider = (props) => {
         carrito: [carrito, setCarrito],
         total: [total, setTotal],
         getTotal,
-        getOneProduct: getOneProduct
+        getOneProduct: getOneProduct,
+        vaciarCarrito
         
         }
 
-
-    // const value = {
-    //     productos: productos,
-    //     menu: [menu, setMenu],
-    //     addCarrito: addCarrito,
-    //     carrito: [carrito, setCarrito],
-    //     total: [total, setTotal],
-    //     getOneProduct: getOneProduct
-        
-    //     }
+      
 
     return (
         <DataContext.Provider value={value}>

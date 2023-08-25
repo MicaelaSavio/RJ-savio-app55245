@@ -4,10 +4,11 @@ import { DataContext } from "../hooks/DataContext"
 import { collection, addDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
 
+
 const Checkout = () => {
-    const { carrito, getTotal } = useContext(DataContext)
+    const { carrito, getTotal, vaciarCarrito } = useContext(DataContext)
 
-
+    const [orderId, setorderId] = useState(null)
     const [values, setValues] = useState({
         nombre: '',
         direccion: '',
@@ -38,11 +39,28 @@ const Checkout = () => {
 
             const orderRef = collection(db, "orders")
 
-            addDoc(orderRef, orders)
+            addDoc(orderRef, orden)
             .then((doc) => {
                 console.log(doc.id)
+                vaciarCarrito()
+                setorderId(doc.id)
             })
+
+            if (orderId) {
+                return (
+                    <div>
+                        <h2>Tu orden ha sido enviada!</h2>
+                        <hr />
+                        <p>Tu numero de orden es: <strong>{orderId}</strong></p>
+
+                        <Link to="/"><button>Volver a inicio</button></Link>
+                    </div>
+                )
+            }
+
+            
     }
+    
 
     return (
         <div className="container">
@@ -88,11 +106,21 @@ const Checkout = () => {
                     name="email"
                 />
 
-                <button className="btnchkt">Enviar</button>
+                <button className="btnchkt" onClick={vaciarCarrito}>Enviar</button>
+      
+                
+                
+                
 
             </form>
+            
         </div>
+
+        
     )
+
+    
+    
 }
 
 
