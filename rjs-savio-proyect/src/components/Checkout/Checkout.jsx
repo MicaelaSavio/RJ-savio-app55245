@@ -92,50 +92,17 @@ const Checkout = () => {
             total: getTotal(),
             fyh: new Date()
         };
+        
+        try {
+            const orderRef = collection(db, "orders");
+            const docRef = await addDoc(orderRef, orden);
 
-        const batch = writeBatch(db)
-        const orderRef = collection(db, "orders")
-        const productosRef = collection(db, "productos")
-        const q = query(productosRef, where( documentId(), "in", carrito.map(item => item.id) ))
-
-        const productos = await getDocs(q)
-        const outOfStock = []
-
-        productos.docs.forEach((doc) =>{
-            const item = carrito.find(prod => prod.id === doc.id)
-            const stock = doc.data().stock
-            
-            if (stock >= item.cantidad){
-                batch.update(doc.ref, {
-                    stock: stock - item.cantidad
-                })
-            }else{
-                outOfStock.push(item)
-            }
-        })
-
-        if (outOfStock.length === 0){
-            await batch.commit()
-            const doc = await addDoc(orderRef, orden)
-
-
-            vaciarCarrito()
-            setOrderId(doc.id)
-        }else {
-            alert ("Hay productos sin stock")
+            console.log(docRef.id);
+            vaciarCarrito();
+            setOrderId(docRef.id);
+        } catch (error) {
+            console.error("Error al enviar la orden:", error);
         }
-
-
-        // try {
-        //     const orderRef = collection(db, "orders");
-        //     const docRef = await addDoc(orderRef, orden);
-
-        //     console.log(docRef.id);
-        //     vaciarCarrito();
-        //     setOrderId(docRef.id);
-        // } catch (error) {
-        //     console.error("Error al enviar la orden:", error);
-        // }
 
 
     }
